@@ -8,10 +8,25 @@
 
 extension LinkedList {
     
-  mutating func reverse() {
-    
-  }
+    mutating func reverse() {
+        var reversedList = LinkedList()
+        
+        while let value = removeLast() {
+            reversedList.append(value)
+        }
+        
+        self = reversedList
+    }
 }
 
+var list = LinkedList<Int>()
+list.push(4)
+list.push(3)
+list.push(2)
+list.push(1)
+print(list)
 
+list.reverse()
+
+print(list)
 //: [Next Challenge](@next)

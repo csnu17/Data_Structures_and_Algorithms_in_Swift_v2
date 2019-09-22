@@ -7,7 +7,18 @@
  */
 
 func printInReverse<T>(_ list: LinkedList<T>) {
-  
+    var tmpList = list
+    
+    while let value = tmpList.removeLast() {
+        print(value)
+    }
 }
 
+var list = LinkedList<Int>()
+list.push(3)
+list.push(2)
+list.push(1)
+print(list)
+
+printInReverse(list)
 //: [Next Challenge](@next)
